@@ -63,3 +63,7 @@ cd /app
 rm -rf /app/*
 unzip /tmp/backend.zip &>>$LOG_FILE
 VALIDATE $? "Extracting backend application code"
+
+npm install &>>$LOG_FILE
+
+cp /etc/systemd/system/backend.service
